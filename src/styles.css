@@ -7,3 +7,24 @@
 html {
   font-family: sans-serif;
 }
+
+.footer {
+  background-color:red;
+  padding:2rem 0;
+  text-align:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.list > * {
+  padding: 4px 8px;
+  border: 1px solid #333;
+}

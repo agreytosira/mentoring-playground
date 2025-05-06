@@ -1,36 +1,28 @@
-import './styles.css'
+import './styles.css';
+import './footer.js';
+import { sampleNotes } from './sample-notes.js';
 
-const app = document.getElementById('app');
+// Get elements
+const notesListElement = document.querySelector('#notesList');
 
-// Membuat elemen heading
-const heading = document.createElement('h1');
-heading.textContent = 'Selamat Datang di Aplikasi Saya';
+// Create note item
+function createNoteItemElement({ id, title, body }) {
+  const container = document.createElement('div');
+  container.setAttribute('data-noteid', id);
 
-// Membuat elemen paragraf
-const paragraph = document.createElement('p');
-paragraph.textContent = 'Ini adalah aplikasi sederhana yang dibuat dengan JavaScript dan Webpack.';
+  const titleElement = document.createElement('h3');
+  titleElement.textContent = title;
 
-// Membuat tombol
-const button = document.createElement('button');
-button.textContent = 'Klik Saya';
-button.addEventListener('click', () => {
-  alert('Tombol telah diklik!');
+  const bodyElement = document.createElement('p');
+  bodyElement.innerText = body;
+
+  container.append(titleElement, bodyElement);
+  
+  return container;
+}
+
+// Render all sample notes
+sampleNotes.forEach((sampleNote) => {
+  const element = createNoteItemElement(sampleNote);
+  notesListElement.append(element);
 });
-
-// Menambahkan elemen-elemen ke dalam app
-app.appendChild(heading);
-app.appendChild(paragraph);
-app.appendChild(button);
-
-// Menambahkan sedikit gaya
-app.style.fontFamily = 'Arial, sans-serif';
-app.style.maxWidth = '800px';
-app.style.margin = '0 auto';
-app.style.padding = '20px';
-heading.style.color = '#333';
-button.style.padding = '8px 16px';
-button.style.backgroundColor = '#4CAF50';
-button.style.color = 'white';
-button.style.border = 'none';
-button.style.borderRadius = '4px';
-button.style.cursor = 'pointer';
