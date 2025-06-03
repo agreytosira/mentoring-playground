@@ -1,5 +1,6 @@
 import './styles.css';
 import './footer.js';
+import './navbar.js';
 import './formTambah.js';
 import { sampleNotes } from './sample-notes.js';
 
