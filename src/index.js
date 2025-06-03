@@ -1,5 +1,6 @@
 import './styles.css';
 import './footer.js';
+import './formTambah.js';
 import { sampleNotes } from './sample-notes.js';
 
 // Get elements
@@ -17,7 +18,7 @@ function createNoteItemElement({ id, title, body }) {
   bodyElement.innerText = body;
 
   container.append(titleElement, bodyElement);
-  
+
   return container;
 }
 

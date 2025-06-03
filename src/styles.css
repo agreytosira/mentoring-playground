@@ -1,6 +1,6 @@
 * {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -8,14 +8,60 @@ html {
   font-family: sans-serif;
 }
 
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.form-tambah form {
+  padding: 1rem;
+  background: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  row-gap: 0.5rem;
+}
+
+.form-tambah form input {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  outline: none;
+  border: none;
+  border: 1px solid black;
+}
+
+.form-tambah form textarea {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  border: 1px solid black;
+  resize: none;
+  min-height: 7.5rem;
+}
+
+.btn-primary {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  background: #008bff;
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #036ec5;
+}
+
 .footer {
-  background-color:red;
-  padding:2rem 0;
-  text-align:center;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  width:100%;
+  background-color: red;
+  padding: 2rem 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .list {
